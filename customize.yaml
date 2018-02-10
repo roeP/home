@@ -1,0 +1,4 @@
+switch.light:
+  friendly_name: "Living Room Light"
+  icon: mdi:ceiling-light
+

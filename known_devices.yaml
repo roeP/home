@@ -1,0 +1,19 @@
+
+roe_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Roe
+  picture: /local/clive.jpg
+  track: true
+  vendor:
+
+malina_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Malina
+  picture: /local/malina.jpg
+  track: true
+  vendor:
+
