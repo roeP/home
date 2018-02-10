@@ -1,0 +1,34 @@
+envout:
+  name: Environment
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+
+sptst:
+  name: SpeedTest
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+##views
+
+todoist_view:
+  name: ToDo
+  view: yes
+  icon: mdi:format-list-checks
+  entities:
+    - calendar.errands
+    - calendar.inbox
+    - calendar.movies_to_watch
+    - calendar.personal
+    - calendar.shopping
+    - calendar.work
+
+pc_view:
+  name: Pi
+  view: yes
+  icon: mdi:raspberrypi
+  entities:
+    - group.sptst
+    - sensor.cpu_speed
+
