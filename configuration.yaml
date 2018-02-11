@@ -38,9 +38,21 @@ mqtt:
   discovery: true
   broker: m23.cloudmqtt.com
   port: 14564
+  client_id: home-assistant-1
+  keepalive: 60
   username: mbvtncuy
   password: XYM9oO9BmSf3
-
+  protocol: 3.1
+  birth_message:
+    topic: "tele/hass1/LWT"
+    payload: "Online"
+    qos: 1
+    retain: true
+  will_message:
+    topic: "tele/hass1/LWT"
+    payload: "Offline"
+    qos: 1
+    retain: true
 
 calendar:
   - platform: todoist
@@ -57,6 +69,27 @@ weather:
     woeid: 1967449
     name: Weather
 
+switch:
+  - platform: mqtt
+    name: "Malina's Small Lamp"
+    state_topic: "stat/switch1/POWER"
+    command_topic: "cmnd/switch1/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+  - platform: mqtt
+    name: "Water Pump"
+    state_topic: "stat/switch2/POWER"
+    command_topic: "cmnd/switch2/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
 
 influxdb:
   host: 127.0.0.1
@@ -98,6 +131,7 @@ map:
 
 # Track the sun
 sun:
+  
 
 # Weather prediction
 sensor:
